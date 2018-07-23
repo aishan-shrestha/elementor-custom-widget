@@ -85,7 +85,7 @@ class Widget_Popular_Posts extends Widget_Base {
 
 	protected function render( $instance = [] ) {
 		// get our input from the widget settings.
-		$settings = $this->get_settings();
+		$settings = $this->get_settings_for_display();
 		$custom_text = ! empty( $settings['heading_text'] ) ? $settings['heading_text'] : ' Popular Posts ';
 		$post_count = ! empty( $settings['posts_per_page'] ) ? (int)$settings['posts_per_page'] : 1;
 		?>
