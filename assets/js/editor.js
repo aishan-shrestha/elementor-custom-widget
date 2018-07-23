@@ -1,0 +1,1 @@
+//add your JS for editor functionality
