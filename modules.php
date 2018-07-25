@@ -14,8 +14,13 @@ class Modules {
 
     public function __construct() {
         // Folder name as modules
+
         $this->modules = [
             'popular-posts',
+        ];
+
+        $this->skins = [
+            'posts',
         ];
     }
 
@@ -27,8 +32,18 @@ class Modules {
 
     public function init(){
         add_action( 'elementor/init', array( $this, 'widgets_registered' ) );
+        add_action( 'elementor/widget/posts/skins_init',  array( $this,'skin_registered'), 1 );
     }
 
+    public function skin_registered($widget) {
+        // We check if the Elementor plugin has been installed / activated.
+        if(defined('ELEMENTOR_PATH') && class_exists('ElementorPro\Modules\Posts\Skins\Skin_Cards')){
+            foreach ( $this->skins as $skin_name ) {
+                include_once( __NAMESPACE__ . 'modules/' . $skin_name . '/skins/skin-posts.php' );
+                $widget->add_skin( new Custom_Posts_Skin( $widget ) );
+            }
+        }
+    }
 
     public function widgets_registered() {
         // We check if the Elementor plugin has been installed / activated.
