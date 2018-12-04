@@ -110,5 +110,4 @@ class Widget_Popular_Posts extends Widget_Base {
 	public function render_plain_content( $instance = [] ) {}
 
 }
-
-Plugin::instance()->widgets_manager->register_widget_type( new Widget_Popular_Posts );
+\Elementor\Plugin::instance()->widgets_manager->register_widget_type( new Widget_Popular_Posts() );

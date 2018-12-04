@@ -7,17 +7,11 @@ Tags: elementor
 	2. Activate the plugin through the 'Plugins' menu in WordPress.
 
 == Description ==
-	- This plugin can be used as a starter boilerplate for creation of custom widget element & a sample skin 
+	- This plugin can be used as a starter boilerplate for creation of custom widget element & a sample skin
 	named("Custom Cards Rebuild" on existing Posts widget) in elementor.
 	- After installation, you will find 'Popular Posts' widget if you search on the elementor Elements
 	- Just have named 'Popular Posts'; you can update the code on widget-popular-post.php as your requirements
 	- You can create other modules like: /modules/<folder-name>/widgets/widget-<folder-name>.php
-		And after that you need to add array value of that folder name.
-		For example:
-		$this->modules = [
-	            'popular-posts',
-	            '<folder-name>',
-	        ];
 
 
 == For Further Reference ==
