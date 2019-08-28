@@ -1,1 +1,6 @@
-//add your CSS for editor functionality
+ul.popular-posts {
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(202px,1fr));
+    grid-gap: 1em;
+}
