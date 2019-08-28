@@ -90,7 +90,7 @@ class Widget_Popular_Posts extends Widget_Base {
 		$post_count = ! empty( $settings['posts_per_page'] ) ? (int)$settings['posts_per_page'] : 1;
 		?>
 		<h3><?php echo $custom_text; ?></h3>
-		<ul>
+		<ul class="popular-posts">
 			<?php
 			$args = array( 'numberposts' => $post_count );
 			$recent_posts = wp_get_recent_posts( $args );
